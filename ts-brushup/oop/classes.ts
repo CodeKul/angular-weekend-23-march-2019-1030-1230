@@ -10,9 +10,9 @@ export class Car {
     }*/
 
     constructor(
-        private speed?: number,
-        private rpm?: number,
-        private brand?: string 
+        private speed: number,
+        private rpm: number,
+        private brand: string 
     ) { } // optional parameters
 
     speedUp(speed: number = 10) { // default parameters
@@ -25,5 +25,5 @@ export class Car {
 }
 
 //obejct creation
-let cr = new Car() //  ORV - Object Reference Variable
+let cr = new Car(56,56,'') //  ORV - Object Reference Variable
 cr.speedUp(89)
