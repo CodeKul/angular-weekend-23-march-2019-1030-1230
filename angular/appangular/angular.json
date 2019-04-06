@@ -130,6 +130,169 @@
           }
         }
       }
+    },
+    "chat": {
+      "root": "projects/chat",
+      "sourceRoot": "projects/chat/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/chat/tsconfig.lib.json",
+            "project": "projects/chat/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/chat/src/test.ts",
+            "tsConfig": "projects/chat/tsconfig.spec.json",
+            "karmaConfig": "projects/chat/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/chat/tsconfig.lib.json",
+              "projects/chat/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "mobile": {
+      "root": "projects/mobile/",
+      "sourceRoot": "projects/mobile/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/mobile",
+            "index": "projects/mobile/src/index.html",
+            "main": "projects/mobile/src/main.ts",
+            "polyfills": "projects/mobile/src/polyfills.ts",
+            "tsConfig": "projects/mobile/tsconfig.app.json",
+            "assets": [
+              "projects/mobile/src/favicon.ico",
+              "projects/mobile/src/assets"
+            ],
+            "styles": [
+              "projects/mobile/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/mobile/src/environments/environment.ts",
+                  "with": "projects/mobile/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mobile:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mobile:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mobile:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/mobile/src/test.ts",
+            "polyfills": "projects/mobile/src/polyfills.ts",
+            "tsConfig": "projects/mobile/tsconfig.spec.json",
+            "karmaConfig": "projects/mobile/karma.conf.js",
+            "styles": [
+              "projects/mobile/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/mobile/src/favicon.ico",
+              "projects/mobile/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/mobile/tsconfig.app.json",
+              "projects/mobile/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "mobile-e2e": {
+      "root": "projects/mobile-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/mobile-e2e/protractor.conf.js",
+            "devServerTarget": "mobile:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mobile:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/mobile-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "appangular"
