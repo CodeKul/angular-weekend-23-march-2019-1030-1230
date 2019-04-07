@@ -7,6 +7,7 @@ import { CardComponent } from './first-sample/card.component';
 import { JumboComponent } from './first-sample/jumbo.component';
 import { BtnsComponent } from './first-sample/btns.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { ExtensionComponent } from './databinding/extension.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { DatabindingComponent } from './databinding/databinding.component';
     CardComponent,
     JumboComponent,
     BtnsComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    ExtensionComponent
   ],
   imports: [
     BrowserModule
