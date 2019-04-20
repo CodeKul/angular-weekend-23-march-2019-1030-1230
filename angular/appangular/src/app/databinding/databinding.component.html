@@ -43,4 +43,13 @@
     <input type="text" [(ngModel)]="tw"> {{tw}}
   </div>
 </div>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" [value]="val">
+    <input type="button" value="1" (click)="setVal(1)">
+    <input type="button" value="2" (click)="setVal(2)">
+    <input type="button" value="3" (click)="setVal(3)">
+    <input type="button" value="4" (click)="setVal(4)">
+  </div>
+</div>
 <app-extension></app-extension>

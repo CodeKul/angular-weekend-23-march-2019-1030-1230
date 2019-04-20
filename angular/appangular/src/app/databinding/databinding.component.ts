@@ -10,6 +10,7 @@ export class DatabindingComponent implements OnInit {
   myNm: string = 'android'
   typ = 'text'
   tw = 'hi'
+  val = 0
 
   constructor() { }
 
@@ -19,5 +20,9 @@ export class DatabindingComponent implements OnInit {
   myClk(ev: any) {
     console.log(new Date().toString())
     console.log(ev)
+  }
+
+  setVal(val : number) {
+    this.val = val
   }
 }
