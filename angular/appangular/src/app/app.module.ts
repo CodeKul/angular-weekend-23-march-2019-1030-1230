@@ -10,6 +10,7 @@ import { BtnsComponent } from './first-sample/btns.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { ExtensionComponent } from './databinding/extension.component';
 import { LocalRefContVwChildComponent } from './local-ref-cont-vw-child/local-ref-cont-vw-child.component';
+import { CustAltComponent } from './cust-alt/cust-alt.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LocalRefContVwChildComponent } from './local-ref-cont-vw-child/local-re
     BtnsComponent,
     DatabindingComponent,
     ExtensionComponent,
-    LocalRefContVwChildComponent
+    LocalRefContVwChildComponent,
+    CustAltComponent
   ],
   imports: [
     BrowserModule,
