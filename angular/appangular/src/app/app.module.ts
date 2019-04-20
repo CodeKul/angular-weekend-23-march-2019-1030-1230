@@ -9,6 +9,7 @@ import { JumboComponent } from './first-sample/jumbo.component';
 import { BtnsComponent } from './first-sample/btns.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { ExtensionComponent } from './databinding/extension.component';
+import { LocalRefContVwChildComponent } from './local-ref-cont-vw-child/local-ref-cont-vw-child.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExtensionComponent } from './databinding/extension.component';
     JumboComponent,
     BtnsComponent,
     DatabindingComponent,
-    ExtensionComponent
+    ExtensionComponent,
+    LocalRefContVwChildComponent
   ],
   imports: [
     BrowserModule,
