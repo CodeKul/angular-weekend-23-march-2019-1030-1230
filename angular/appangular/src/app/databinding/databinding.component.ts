@@ -9,6 +9,7 @@ export class DatabindingComponent implements OnInit {
 
   myNm: string = 'android'
   typ = 'text'
+  tw = 'hi'
 
   constructor() { }
 
