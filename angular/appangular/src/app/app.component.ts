@@ -1,3 +1,4 @@
+import { BtnEv } from './cust-alt/ev';
 import { Component } from '@angular/core';
 
 @Component({
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appangular';
+  ev : BtnEv
+
+  onBtn(ev: BtnEv) {
+    this.ev = ev
+    console.log(ev)
+    console.log(`In App Component onBtn`)
+  }
 }

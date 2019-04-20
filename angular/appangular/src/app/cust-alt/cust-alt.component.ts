@@ -1,4 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
+import { BtnEv } from './ev';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-cust-alt',
@@ -13,6 +14,9 @@ export class CustAltComponent implements OnInit {
   @Input('typ')
   type: string
 
+  @Output()
+  btnClk: EventEmitter<BtnEv> = new EventEmitter()
+
   constructor() { }
 
   ngOnInit() {
@@ -21,6 +25,11 @@ export class CustAltComponent implements OnInit {
   }
 
   okClk() {
-
+    let ev: BtnEv = {
+      ttl: this.ttl,
+      typ: this.type
+    }
+    this.btnClk.emit(ev)
+    console.log(`Button Clicked in CustAltComponent`)
   }
 }
