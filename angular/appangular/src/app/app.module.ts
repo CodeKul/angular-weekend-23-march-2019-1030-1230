@@ -11,6 +11,9 @@ import { DatabindingComponent } from './databinding/databinding.component';
 import { ExtensionComponent } from './databinding/extension.component';
 import { LocalRefContVwChildComponent } from './local-ref-cont-vw-child/local-ref-cont-vw-child.component';
 import { CustAltComponent } from './cust-alt/cust-alt.component';
+import { IntCmpComV1Component } from './int-cmp-com-v1/int-cmp-com-v1.component';
+import { AlPkComponent } from './int-cmp-com-v1/al-pk.component';
+import { AlMnComponent } from './int-cmp-com-v1/al-mn.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { CustAltComponent } from './cust-alt/cust-alt.component';
     DatabindingComponent,
     ExtensionComponent,
     LocalRefContVwChildComponent,
-    CustAltComponent
+    CustAltComponent,
+    IntCmpComV1Component,
+    AlPkComponent,
+    AlMnComponent
   ],
   imports: [
     BrowserModule,
