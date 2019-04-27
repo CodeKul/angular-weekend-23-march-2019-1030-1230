@@ -14,6 +14,7 @@ import { CustAltComponent } from './cust-alt/cust-alt.component';
 import { IntCmpComV1Component } from './int-cmp-com-v1/int-cmp-com-v1.component';
 import { AlPkComponent } from './int-cmp-com-v1/al-pk.component';
 import { AlMnComponent } from './int-cmp-com-v1/al-mn.component';
+import { DirectivesComponent } from './directives/directives.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { AlMnComponent } from './int-cmp-com-v1/al-mn.component';
     CustAltComponent,
     IntCmpComV1Component,
     AlPkComponent,
-    AlMnComponent
+    AlMnComponent,
+    DirectivesComponent
   ],
   imports: [
     BrowserModule,
