@@ -1,3 +1,5 @@
 <div class="container">
-  <app-directives></app-directives>
+  <app-lifecycle [demo]="title" *ngIf="isSh"></app-lifecycle>
+  <input value="Okay" type="button" class="btn btn-info" (click)="isSh =!isSh">
+  <input value="Change Value" type="button" class="btn btn-warning" (click)="onBtn()">
 </div>

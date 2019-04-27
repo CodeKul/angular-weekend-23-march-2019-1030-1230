@@ -8,10 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'appangular';
-  ev : BtnEv
+  ev: BtnEv
 
-  onBtn(ev: BtnEv) {
+  isSh = false
+  onBtn(ev?: BtnEv) {
     this.ev = ev
+    this.title = new Date().toString()
     console.log(ev)
     console.log(`In App Component onBtn`)
   }
