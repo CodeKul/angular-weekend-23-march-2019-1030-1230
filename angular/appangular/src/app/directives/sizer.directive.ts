@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Renderer2, HostBinding, HostListener } from '@angular/core';
+import { Directive, ElementRef, Renderer2, HostBinding, HostListener, Input } from '@angular/core';
 
 @Directive({
   selector: '[appSizer]'
@@ -8,6 +8,7 @@ export class SizerDirective {
   @HostBinding('style.border')
   private border: string;
 
+  @Input('appSizer')
   @HostBinding('style.width.px')
   private width: number;
 
@@ -18,7 +19,7 @@ export class SizerDirective {
     // elRf.nativeElement.style.border = `1px solid red` // not recommended
     // rend.setStyle(elRf.nativeElement, 'border', '1px solid red')
     // this.border = '1px solid red'
-    this.width = 600
+    // this.width = 600
   }
 
   @HostListener('mouseenter')
