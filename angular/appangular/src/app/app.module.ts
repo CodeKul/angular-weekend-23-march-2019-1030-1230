@@ -16,6 +16,7 @@ import { AlPkComponent } from './int-cmp-com-v1/al-pk.component';
 import { AlMnComponent } from './int-cmp-com-v1/al-mn.component';
 import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
+import { UnlessDirective } from './directives/unless.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { SizerDirective } from './directives/sizer.directive';
     AlPkComponent,
     AlMnComponent,
     DirectivesComponent,
-    SizerDirective
+    SizerDirective,
+    UnlessDirective
   ],
   imports: [
     BrowserModule,
