@@ -22,3 +22,25 @@
     <input type="text" [appSizer]="150">
   </div>
 </div>
+<div class="row" *ngIf="false">
+  <div class="col-md-12">
+    <div class="alert alert-info">As with other directives, you apply a structural directive to a host element. The
+      directive then does whatever it's supposed to do with that host element and its descendants.</div>
+  </div>
+</div>
+<ng-template [ngIf]="true">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="alert alert-info">As with other directives, you apply a structural directive to a host element. The
+        directive then does whatever it's supposed to do with that host element and its descendants.</div>
+    </div>
+  </div>
+</ng-template>
+
+<div class="row">
+  <div class="col-md-12">
+    <ol>
+      <li *ngFor="let mb of (mobiles); let ind = index;"> {{mb}} => {{ind}}</li>
+    </ol>
+  </div>
+</div>

@@ -10,6 +10,10 @@ export class DirectivesComponent implements OnInit {
   maSt = {
     border : `1px solid red`
   }
+
+  mobiles = [
+    'Android', 'Apple', 'Windows', 'Nokia', 'Samsung'
+  ]
   constructor() { }
 
   ngOnInit() {
