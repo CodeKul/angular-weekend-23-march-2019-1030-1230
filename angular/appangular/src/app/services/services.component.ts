@@ -9,11 +9,20 @@ import { IotService } from './iot.service';
 })
 export class ServicesComponent implements OnInit {
 
+  crRpm : number
   constructor(
     private iotSv : IotService
   ) { }
 
   ngOnInit() {
+  }
+
+  rpmOp(btn : number) {
+    if(btn == 1) {
+      this.crRpm = this.iotSv.inc()
+    } else {
+      this.crRpm = this.iotSv.dec()
+    }
   }
 
 }
