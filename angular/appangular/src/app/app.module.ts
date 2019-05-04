@@ -1,3 +1,4 @@
+import { AlService } from './services/al.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -20,6 +21,8 @@ import { UnlessDirective } from './directives/unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
 import { ServicesComponent } from './services/services.component';
 import { IotService } from './services/iot.service';
+import { PickerComponent } from './services/picker.component';
+import { MakerComponent } from './services/maker.component';
 
 @NgModule({
   declarations: [
@@ -39,13 +42,15 @@ import { IotService } from './services/iot.service';
     SizerDirective,
     UnlessDirective,
     LifecycleComponent,
-    ServicesComponent
+    ServicesComponent,
+    PickerComponent,
+    MakerComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [IotService],
+  providers: [IotService, AlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
