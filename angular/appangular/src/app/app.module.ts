@@ -18,6 +18,8 @@ import { DirectivesComponent } from './directives/directives.component';
 import { SizerDirective } from './directives/sizer.directive';
 import { UnlessDirective } from './directives/unless.directive';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ServicesComponent } from './services/services.component';
+import { IotService } from './services/iot.service';
 
 @NgModule({
   declarations: [
@@ -36,13 +38,14 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     DirectivesComponent,
     SizerDirective,
     UnlessDirective,
-    LifecycleComponent
+    LifecycleComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [IotService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

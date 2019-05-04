@@ -10,7 +10,6 @@ export class LifecycleComponent implements
 
   @Input()
   demo: string
-  constructor() { }
 
   ngOnChanges(changes: SimpleChanges): void {
     console.log(`ngOnChanges`)
