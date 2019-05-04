@@ -1,11 +1,17 @@
-import { EventEmitter } from '@angular/core';
+import { MyService } from './my.service';
+import { EventEmitter, Injectable } from '@angular/core';
 import { EvAl } from '../int-cmp-com-v1/ev-al';
 
+@Injectable({
+  providedIn : 'root'
+})
 export class AlService {
 
   private alEm: EventEmitter<EvAl> = new EventEmitter()
 
-  constructor() {
+  constructor(
+    private mySv : MyService
+  ) {
 
   }
 

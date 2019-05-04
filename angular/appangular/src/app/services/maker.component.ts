@@ -7,7 +7,7 @@ import { EvAl } from '../int-cmp-com-v1/ev-al';
   template: `
   <div class="row">
   <div class="col-md-12">
-    <div style="height: 600px;" [class]="al.al">
+    <div style="height: 600px;" [class]="al?.al">
     </div>
     </div>
   </div>

@@ -1,3 +1,4 @@
+import { MyService } from './services/my.service';
 import { AlService } from './services/al.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -50,7 +51,7 @@ import { MakerComponent } from './services/maker.component';
     BrowserModule,
     FormsModule
   ],
-  providers: [IotService, AlService],
+  // providers: [IotService, AlService, MyService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
