@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-otp',
@@ -7,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OtpComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private router : Router
+  ) { }
 
   ngOnInit() {
   }
 
   onOtp(mob: string, otp: string) {
-
+    this.router.navigate(['dash'])
   }
 }

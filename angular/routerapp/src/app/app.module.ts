@@ -5,12 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { OtpComponent } from './otp/otp.component';
 import { NfComponent } from './nf/nf.component';
+import { DashComponent } from './dash/dash.component';
+import { AddMobileComponent } from './add-mobile/add-mobile.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     OtpComponent,
-    NfComponent
+    NfComponent,
+    DashComponent,
+    AddMobileComponent
   ],
   imports: [
     BrowserModule,
