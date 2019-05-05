@@ -1,0 +1,11 @@
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" #mob placeholder="Mobile Number">
+    <input type="text" #otp placeholder="OTP">
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <input value="Okay" type="button" class="btn btn-info" (click)="onOtp(mob.value, otp.value)">
+  </div>
+</div>
