@@ -9,13 +9,13 @@ import { Router } from '@angular/router';
 export class OtpComponent implements OnInit {
 
   constructor(
-    private router : Router
+    private router: Router
   ) { }
 
   ngOnInit() {
   }
 
   onOtp(mob: string, otp: string) {
-    this.router.navigate(['dash'])
+    this.router.navigate(['dash', mob])
   }
 }

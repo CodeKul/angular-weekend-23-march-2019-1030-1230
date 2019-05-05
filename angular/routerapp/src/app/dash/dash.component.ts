@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dash',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DashComponent implements OnInit {
 
-  constructor() { }
+  usId: string
+  constructor(
+    private acRt: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.acRt.params.subscribe(
+      prm => this.usId = prm['usId']
+    )
   }
-
 }

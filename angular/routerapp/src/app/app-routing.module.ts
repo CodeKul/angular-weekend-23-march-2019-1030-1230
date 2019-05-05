@@ -7,8 +7,9 @@ import { OtpComponent } from './otp/otp.component';
 
 const routes: Routes = [
   { path: '', component: OtpComponent },
-  { path: 'dash', component: DashComponent },
-  { path: 'addmobile', component: AddMobileComponent },
+  { path: 'dash/:usId', component: DashComponent },
+  { path: 'dash', redirectTo: 'dash/456', pathMatch: 'full' },
+  { path: 'addmobile/:mob', component: AddMobileComponent },
   { path: '**', component: NfComponent }
 ];
 
