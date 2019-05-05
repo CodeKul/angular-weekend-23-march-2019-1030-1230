@@ -9,6 +9,9 @@ import { ActivatedRoute } from '@angular/router';
 export class DashComponent implements OnInit {
 
   usId: string
+  tm: string
+  otp: string
+
   constructor(
     private acRt: ActivatedRoute
   ) { }
@@ -17,5 +20,10 @@ export class DashComponent implements OnInit {
     this.acRt.params.subscribe(
       prm => this.usId = prm['usId']
     )
+
+    this.acRt.queryParams.subscribe(prms => {
+      this.tm = prms['tm']
+      this.otp = prms['otp']
+    })
   }
 }

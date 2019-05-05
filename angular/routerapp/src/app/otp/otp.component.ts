@@ -16,6 +16,11 @@ export class OtpComponent implements OnInit {
   }
 
   onOtp(mob: string, otp: string) {
-    this.router.navigate(['dash', mob])
+    this.router.navigate(['dash', mob], {
+      queryParams: {
+        tm: new Date().getTime(),
+        otp: otp
+      }
+    })
   }
 }
