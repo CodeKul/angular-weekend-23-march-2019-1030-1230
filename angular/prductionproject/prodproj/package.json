@@ -19,7 +19,10 @@
     "@angular/platform-browser": "~7.2.0",
     "@angular/platform-browser-dynamic": "~7.2.0",
     "@angular/router": "~7.2.0",
+    "@ng-bootstrap/ng-bootstrap": "^4.1.2",
     "core-js": "^2.5.4",
+    "ng2-completer": "3.0.0-beta.2",
+    "ng2-smart-table": "^1.4.0",
     "rxjs": "~6.3.3",
     "tslib": "^1.9.0",
     "zone.js": "~0.8.26"
