@@ -14,3 +14,8 @@
     <a [routerLink]="['addmobile','9607352625']" [queryParams]="{ tm :'982759875',us : 'aj' }">Add your other mobile</a>
   </div>
 </div>
+<div class="row alert alert-danger" *ngIf="st">
+  <div class="col-md-12" >
+    <h5>You must login first</h5>
+  </div>
+</div>

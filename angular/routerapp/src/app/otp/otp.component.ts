@@ -1,3 +1,4 @@
+import { GuardService } from './../add-mobile/guard.service';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,11 +9,16 @@ import { Router } from '@angular/router';
 })
 export class OtpComponent implements OnInit {
 
+  st : boolean = false
   constructor(
-    private router: Router
+    private router: Router,
+    private ser: GuardService
   ) { }
 
   ngOnInit() {
+    this.ser.em.subscribe(st => {
+      this.st = st
+    })
   }
 
   onOtp(mob: string, otp: string) {

@@ -14,9 +14,9 @@ const dashRoutes: Routes = [
 ]
 const routes: Routes = [
   { path: '', component: OtpComponent },
-  { path: 'dash/:usId', component: DashComponent, children : dashRoutes },
+  { path: 'dash/:usId', component: DashComponent, children: dashRoutes, canActivate: [UserGuard] },
   { path: 'dash', redirectTo: 'dash/456', pathMatch: 'full' },
-  { path: 'addmobile/:mob', component: AddMobileComponent, canActivate :[UserGuard] },
+  { path: 'addmobile/:mob', component: AddMobileComponent, canActivate: [UserGuard] },
   { path: '**', component: NfComponent }
 ];
 
