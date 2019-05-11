@@ -5,7 +5,14 @@
         <h1 class="display-4">Dashboard {{usId}}</h1>
         <p class="lead">This is IoT Dashboard for realtime analytics</p>
         <p class="lead"> OTP is {{otp}} and Timestamp is {{tm}}</p>
+        <a [routerLink]="['profile']">Profile</a>
+        <a [routerLink]="['friends']">Friend List</a>
       </div>
     </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <router-outlet></router-outlet>
   </div>
 </div>
