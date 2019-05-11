@@ -1,3 +1,4 @@
+import { UserGuard } from './add-mobile/user.guard';
 import { ProfileComponent } from './dash/profile.component';
 import { AddMobileComponent } from './add-mobile/add-mobile.component';
 import { DashComponent } from './dash/dash.component';
@@ -15,7 +16,7 @@ const routes: Routes = [
   { path: '', component: OtpComponent },
   { path: 'dash/:usId', component: DashComponent, children : dashRoutes },
   { path: 'dash', redirectTo: 'dash/456', pathMatch: 'full' },
-  { path: 'addmobile/:mob', component: AddMobileComponent },
+  { path: 'addmobile/:mob', component: AddMobileComponent, canActivate :[UserGuard] },
   { path: '**', component: NfComponent }
 ];
 
