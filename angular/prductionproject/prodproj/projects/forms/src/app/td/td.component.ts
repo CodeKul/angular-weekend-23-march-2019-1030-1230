@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { NgForm, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-td',
@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class TdComponent implements OnInit {
 
+  emlPat = "[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?\.)+[a-zA-Z0-9](?:[a-zA-Z0-9-]*[a-zA-Z0-9])?"
   constructor() { }
 
   ngOnInit() {

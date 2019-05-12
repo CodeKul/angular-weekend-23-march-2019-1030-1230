@@ -3,23 +3,23 @@
     <h5 class="text-muted">Template Driven Forms</h5>
   </div>
   <div>
-    <input type="text" placeholder="User Name">
-    <p> Enter User Name</p>
+    <input type="text" placeholder="User Name" name="usNm" required ngModel #usNm="ngModel">
+    <p *ngIf="!usNm.valid"> Enter User Name</p>
   </div>
   <div>
-    <input type="text" placeholder="Email">
-    <p> Enter Email</p>
-    <p> Enter Valid Email</p>
+    <input type="text" placeholder="Email" name="eml" required [pattern]="emlPat" ngModel #eml="ngModel">
+    <p *ngIf="eml.errors?.required"> Enter Email</p>
+    <p *ngIf="eml.errors?.pattern"> Enter Valid Email</p>
   </div>
   <div>
-    <input type="text" placeholder="Password">
-    <p> Enter Password</p>
+    <input type="text" placeholder="Password" name="pass" required ngModel #pass="ngModel">
+    <p *ngIf="!pass.valid"> Enter Password</p>
   </div>
   <div>
     <input type="text" placeholder="Confirm Password">
     <p> Confirm Password</p>
   </div>
   <div>
-    <input type="submit" value="Okay" class="btn btn-info">
+    <input [disabled]="!myFrm.valid" type="submit" value="Okay" class="btn btn-info">
   </div>
 </form>
