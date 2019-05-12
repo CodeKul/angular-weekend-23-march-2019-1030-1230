@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { MedicalComponent } from './medical/medical.component';
 
 @NgModule({
-  declarations: [],
+  declarations: [MedicalComponent],
   imports: [
     CommonModule
   ]
