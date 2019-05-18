@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-dd',
@@ -7,9 +8,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DdComponent implements OnInit {
 
-  constructor() { }
+  frmGrp: FormGroup
+  constructor(
+    private fb: FormBuilder
+  ) {
 
-  ngOnInit() {
   }
 
+  ngOnInit() {
+    this.frmGrp = this.fb.group({
+
+    })
+    console.log(this.frmGrp)
+  }
 }

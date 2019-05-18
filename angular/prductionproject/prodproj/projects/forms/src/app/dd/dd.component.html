@@ -1,3 +1,25 @@
-<p>
-  dd works!
-</p>
+<form class="card" novalidate [formGroup]="frmGrp">
+  <div>
+    <h5 class="text-muted">Template Driven Forms</h5>
+  </div>
+  <div>
+    <input type="text" placeholder="User Name" name="usNm">
+    <p> Enter User Name</p>
+  </div>
+  <div>
+    <input type="text" placeholder="Email" name="eml">
+    <p> Enter Email</p>
+    <p> Enter Valid Email</p>
+  </div>
+  <div>
+    <input type="text" placeholder="Password" name="pass">
+    <p> Enter Password</p>
+  </div>
+  <div>
+    <input type="text" placeholder="Confirm Password">
+    <p> Confirm Password</p>
+  </div>
+  <div>
+    <input type="submit" value="Okay" class="btn btn-info">
+  </div>
+</form>
