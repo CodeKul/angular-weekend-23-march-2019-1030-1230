@@ -1,18 +1,18 @@
-<form class="card" novalidate [formGroup]="frmGrp">
+<form class="card" novalidate [formGroup]="frmGrp" (ngSubmit)="onSub()">
   <div>
-    <h5 class="text-muted">Template Driven Forms</h5>
+    <h5 class="text-muted">Data Driven Forms</h5>
   </div>
   <div>
-    <input type="text" placeholder="User Name" name="usNm">
+    <input type="text" placeholder="User Name" formControlName="usNm">
     <p> Enter User Name</p>
   </div>
   <div>
-    <input type="text" placeholder="Email" name="eml">
+    <input type="text" placeholder="Email" formControlName="eml">
     <p> Enter Email</p>
     <p> Enter Valid Email</p>
   </div>
   <div>
-    <input type="text" placeholder="Password" name="pass">
+    <input type="text" placeholder="Password" formControlName="pass">
     <p> Enter Password</p>
   </div>
   <div>
