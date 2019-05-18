@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors } from '@angular/forms';
 import { Reg } from './reg';
+import { RegValidators } from './reg.validators';
 
 @Component({
   selector: 'app-dd',
@@ -23,16 +24,24 @@ export class DdComponent implements OnInit {
       pass: '1234'
     }
 
+    let usNmVlds = Validators.compose([
+      Validators.required,
+      RegValidators.isStartWithA
+    ])
+    let emlVlds = Validators.compose([
+      Validators.required,
+      Validators.email
+    ])
     this.frmGrp = this.fb.group({
-      usNm: this.fb.control(data.usNm),
-      eml: this.fb.control(data.eml),
-      pass: this.fb.control(data.pass),
+      usNm: this.fb.control('', usNmVlds),
+      eml: this.fb.control('', emlVlds),
+      pass: this.fb.control('', Validators.required),
     })
     console.log(this.frmGrp)
   }
 
   onSub() {
-    this.frmGrp.patchValue({ 'usNm': 'java' });
+    //this.frmGrp.patchValue({ 'usNm': 'java' });
     console.log(this.frmGrp)
   }
 }
