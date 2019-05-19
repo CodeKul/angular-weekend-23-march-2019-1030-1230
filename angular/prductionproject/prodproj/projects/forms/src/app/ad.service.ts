@@ -6,7 +6,8 @@ import 'rxjs/add/observable/interval'
   providedIn: 'root'
 })
 export class AdService {
-  constructor() { }
+  constructor() {
+  }
 
   obsAds() {
     return interval(1500)
