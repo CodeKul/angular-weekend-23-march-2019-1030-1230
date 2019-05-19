@@ -8,7 +8,13 @@ export class ObsService {
 
   constructor() { }
 
-  myObs() : Observable<number> {
-
+  myObs(): Observable<number> {
+    return Observable.create(sub => {
+      for (let i = 0; i < 100; i++) {
+        // if (i == 50) sub.error(new Error(`This is simple error`))
+        sub.next(i)
+      }
+      sub.complete()
+    })
   }
 }
