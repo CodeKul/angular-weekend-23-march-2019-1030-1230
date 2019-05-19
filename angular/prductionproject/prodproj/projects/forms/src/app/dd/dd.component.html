@@ -11,6 +11,7 @@
     <input type="text" placeholder="Email" formControlName="eml">
     <p *ngIf="frmGrp.controls.eml.errors?.required"> Enter Email</p>
     <p *ngIf="frmGrp.controls.eml.errors?.email"> Enter Valid Email</p>
+    <p *ngIf="frmGrp.controls.eml.errors?.taken"> Email Address is already taken</p>
   </div>
   <div>
     <input type="text" placeholder="Password" formControlName="pass">

@@ -1,4 +1,5 @@
 import { AbstractControl, ValidationErrors } from '@angular/forms';
+import { Observable } from 'rxjs';
 
 export class RegValidators {
     static isStartWithA(control: AbstractControl): ValidationErrors | null {
@@ -6,5 +7,19 @@ export class RegValidators {
             return null
         }
         return { isStartWithA: true }
+    }
+
+    static taken(control: AbstractControl): Observable<ValidationErrors | null> {
+        return Observable.create(sub => {
+            setTimeout(() => {
+                if (control.value == 'team@codekul.com') {
+                    sub.next({ taken: true })
+                    sub.complete()
+                } else {
+                    sub.next(null)
+                    sub.complete()
+                }
+            }, 1500)
+        })
     }
 }

@@ -34,7 +34,7 @@ export class DdComponent implements OnInit {
     ])
     this.frmGrp = this.fb.group({
       usNm: this.fb.control('', usNmVlds),
-      eml: this.fb.control('', emlVlds),
+      eml: this.fb.control('', emlVlds, RegValidators.taken),
       pass: this.fb.control('', Validators.required),
     })
     console.log(this.frmGrp)
