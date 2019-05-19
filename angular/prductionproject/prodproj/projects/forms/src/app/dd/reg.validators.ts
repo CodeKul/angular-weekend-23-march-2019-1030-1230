@@ -5,6 +5,6 @@ export class RegValidators {
         if (control.value.charAt(0) == 'a' || control.value.charAt(0) == 'A') {
             return null
         }
-        return { isStartWithA: false }
+        return { isStartWithA: true }
     }
 }

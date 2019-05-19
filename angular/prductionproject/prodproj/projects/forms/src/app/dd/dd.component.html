@@ -4,22 +4,23 @@
   </div>
   <div>
     <input type="text" placeholder="User Name" formControlName="usNm">
-    <p> Enter User Name</p>
+    <p *ngIf="frmGrp.controls.usNm.errors?.required"> Enter User Name </p>
+    <p *ngIf="frmGrp.controls.usNm.errors?.isStartWithA"> User Name Should Start form A or a </p>
   </div>
   <div>
     <input type="text" placeholder="Email" formControlName="eml">
-    <p> Enter Email</p>
-    <p> Enter Valid Email</p>
+    <p *ngIf="frmGrp.controls.eml.errors?.required"> Enter Email</p>
+    <p *ngIf="frmGrp.controls.eml.errors?.email"> Enter Valid Email</p>
   </div>
   <div>
     <input type="text" placeholder="Password" formControlName="pass">
-    <p> Enter Password</p>
+    <p *ngIf="frmGrp.controls.pass.errors?.required"> Enter Password</p>
   </div>
   <div>
     <input type="text" placeholder="Confirm Password">
     <p> Confirm Password</p>
   </div>
   <div>
-    <input type="submit" value="Okay" class="btn btn-info">
+    <input [disabled]="!frmGrp.valid" type="submit" value="Okay" class="btn btn-info">
   </div>
 </form>
