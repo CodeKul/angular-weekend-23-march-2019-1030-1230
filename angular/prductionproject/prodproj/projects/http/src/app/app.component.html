@@ -6,12 +6,17 @@
   </div>
   <div class="row">
     <div class="col-md-12">
-      <div class="card" style="width: 18rem;">
-        <img [src]="data?.avatar" class="card-img-top" alt="...">
-        <div class="card-body">
-          <p class="card-text">Email - {{data?.email}} First Name - {{data?.first_name}} Last Name - {{data?.last_name}}</p>
-        </div>
-      </div>
+     <app-user-card [data]="data"></app-user-card>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="button" value="Get Many" class="btn btn-info" (click)="manyUsers()">
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-3" *ngFor="let data of users">
+        <app-user-card [data]="data"></app-user-card>
     </div>
   </div>
 </div>
