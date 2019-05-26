@@ -14,4 +14,23 @@
       <p> Name {{name | hypen:4}}</p>
     </div>
   </div>
+  <div class="row">
+    <input type="text" #cmp placeholder="Company Name">
+    <input type="text" #cst placeholder="Cost">
+    <input type="text" #os placeholder="OS">
+    <input type="button" value="Add" class="btn btn-info" (click)="newMobile(cmp.value,cst.value,os.value)">
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <input type="text" [(ngModel)]="cmNm">
+      
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <ol>
+        <li *ngFor="let mobile of (mobiles | filter:cmNm)">{{mobile?.company}}</li>
+      </ol>
+    </div>
+  </div>
 </div>
