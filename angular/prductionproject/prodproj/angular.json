@@ -642,6 +642,169 @@
           }
         }
       }
+    },
+    "demo-sushil": {
+      "root": "projects/demo-sushil/",
+      "sourceRoot": "projects/demo-sushil/src",
+      "projectType": "application",
+      "prefix": "app",
+      "schematics": {},
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "dist/demo-sushil",
+            "index": "projects/demo-sushil/src/index.html",
+            "main": "projects/demo-sushil/src/main.ts",
+            "polyfills": "projects/demo-sushil/src/polyfills.ts",
+            "tsConfig": "projects/demo-sushil/tsconfig.app.json",
+            "assets": [
+              "projects/demo-sushil/src/favicon.ico",
+              "projects/demo-sushil/src/assets"
+            ],
+            "styles": [
+              "projects/demo-sushil/src/styles.css"
+            ],
+            "scripts": [],
+            "es5BrowserSupport": true
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/demo-sushil/src/environments/environment.ts",
+                  "with": "projects/demo-sushil/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "demo-sushil:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "demo-sushil:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "demo-sushil:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/demo-sushil/src/test.ts",
+            "polyfills": "projects/demo-sushil/src/polyfills.ts",
+            "tsConfig": "projects/demo-sushil/tsconfig.spec.json",
+            "karmaConfig": "projects/demo-sushil/karma.conf.js",
+            "styles": [
+              "projects/demo-sushil/src/styles.css"
+            ],
+            "scripts": [],
+            "assets": [
+              "projects/demo-sushil/src/favicon.ico",
+              "projects/demo-sushil/src/assets"
+            ]
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/demo-sushil/tsconfig.app.json",
+              "projects/demo-sushil/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "demo-sushil-e2e": {
+      "root": "projects/demo-sushil-e2e/",
+      "projectType": "application",
+      "prefix": "",
+      "architect": {
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/demo-sushil-e2e/protractor.conf.js",
+            "devServerTarget": "demo-sushil:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "demo-sushil:serve:production"
+            }
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": "projects/demo-sushil-e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "demo-lib": {
+      "root": "projects/demo-lib",
+      "sourceRoot": "projects/demo-lib/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/demo-lib/tsconfig.lib.json",
+            "project": "projects/demo-lib/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/demo-lib/src/test.ts",
+            "tsConfig": "projects/demo-lib/tsconfig.spec.json",
+            "karmaConfig": "projects/demo-lib/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/demo-lib/tsconfig.lib.json",
+              "projects/demo-lib/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "prodproj"

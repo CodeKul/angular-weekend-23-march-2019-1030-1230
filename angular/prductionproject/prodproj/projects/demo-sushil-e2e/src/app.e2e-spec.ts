@@ -1,10 +1,6 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-// Id - 1135868116
-// pass -7019
-
-//192.168.17.1
 describe('workspace-project App', () => {
   let page: AppPage;
 
@@ -14,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to prodproj!');
+    expect(page.getTitleText()).toEqual('Welcome to demo-sushil!');
   });
 
   afterEach(async () => {

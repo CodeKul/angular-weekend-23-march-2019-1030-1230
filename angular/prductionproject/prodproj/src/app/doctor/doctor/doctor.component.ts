@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class DoctorComponent implements OnInit {
 
   isSh = false
-  prg : number = 0
+  prg: number = 0
   settings = {
     columns: {
       id: {
@@ -39,7 +39,7 @@ export class DoctorComponent implements OnInit {
       username: "Antonette",
       email: "Shanna@melissa.tv"
     },
-    
+
     {
       id: 11,
       name: "Nicholas DuBuque",

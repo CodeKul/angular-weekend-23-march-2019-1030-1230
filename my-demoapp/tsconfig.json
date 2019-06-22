@@ -17,14 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "demo-lib": [
-        "dist/demo-lib"
-      ],
-      "demo-lib/*": [
-        "dist/demo-lib/*"
-      ]
-    }
+    ]
   }
 }
