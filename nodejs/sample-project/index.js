@@ -1,4 +1,7 @@
 const convertHTMLToPDF = require("pdf-puppeteer");
+const chalk = require('chalk');
+
+console.log(chalk`{inverse Converting HTML to PDF}`)
 
 let html = `
     <html>
@@ -12,7 +15,7 @@ let html = `
 `
 convertHTMLToPDF(
     html,
-    pdf => console.log(`Pdf created`),{
+    pdf => console.log(chalk`{bold bgRed Pdf created}`),{
         path : `/home/aniruddha/Desktop/my.pdf`
     }
 );
