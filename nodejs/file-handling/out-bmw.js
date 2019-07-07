@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Bmw = void 0;
 
-var _outCar = require("./out-car");
+var _car = require("./car");
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -44,7 +44,7 @@ function (_Car) {
   }]);
 
   return Bmw;
-}(_outCar.Car);
+}(_car.Car);
 
 exports.Bmw = Bmw;
 var bmw = new Bmw();
