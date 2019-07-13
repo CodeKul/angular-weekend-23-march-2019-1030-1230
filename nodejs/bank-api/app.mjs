@@ -1,5 +1,6 @@
 import express from 'express'
 import bodyParser from 'body-parser'
+import fileUpload from 'express-fileupload'
 import { CustomerController } from './customer/controller/customer-controller.mjs';
 import { AccountController } from './account/controller/account-controller.mjs';
 
@@ -13,6 +14,7 @@ let urlEnc = bodyParser.urlencoded({
 })
 
 
+app.use(fileUpload())
 app.use('/customer', new CustomerController(express).getRouter())
 app.use('/account', new AccountController(express).getRouter())
 
