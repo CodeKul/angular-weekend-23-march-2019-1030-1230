@@ -13,6 +13,7 @@ export class KycController {
         this.jsonBodyParser = jsonBodyParser
 
         this.fillForm()
+        this.viewKyc()
     }
 
     getRouter() {
@@ -48,6 +49,26 @@ export class KycController {
     }
 
     viewKyc(id) {
-
+        this.router.get(``, (req, res) => {
+            let query = `
+                select 
+                *
+                from kyc
+            `
+            this.connection.query(query, (err, results, fields) => {
+                if (err) {
+                    res.json({
+                        sts: 'error',
+                        msg: 'Problem in fetching KYCs',
+                        err: err
+                    })
+                    return
+                }
+                res.json({
+                    msg: results,
+                    sts : 'success',
+                })
+            })
+        })
     }
 }
