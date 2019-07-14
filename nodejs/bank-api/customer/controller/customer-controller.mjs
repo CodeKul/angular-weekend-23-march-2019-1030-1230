@@ -1,4 +1,3 @@
-import 'path'
 export class CustomerController {
 
     constructor(express) {
