@@ -1,10 +1,11 @@
 {
     "type": "mysql",
-    "host": "localhost",
+    "host": "127.0.0.1",
     "port": 3306,
     "username": "root",
-    "password": "root",
-    "database": "test",
+    "password": "melayer",
+    "database": "codekul",
     "entities": ["src/**/*.entity{.ts,.js}"],
-    "synchronize": true
+    "synchronize": true,
+    "socketPath" : "/var/run/mysqld/mysqld.sock"
   }
